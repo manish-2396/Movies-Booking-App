@@ -3,8 +3,7 @@ document.querySelector("#add_to_wallet").addEventListener("click",function(){
     let arr = JSON.parse(localStorage.getItem("amount")) || 0;
     let Amount = document.querySelector("#amount").value;
 
-
-    arr.push(Amount)
+    arr+=Number(Amount)
     localStorage.setItem("amount" ,JSON.stringify(arr));
 });
 
