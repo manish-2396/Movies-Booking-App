@@ -5,6 +5,7 @@ document.querySelector("#add_to_wallet").addEventListener("click",function(){
 
     arr+=Number(Amount)
     localStorage.setItem("amount" ,JSON.stringify(arr));
+    document.querySelector("#wallet").innerText = arr;
 });
 
 document.querySelector("#book_movies").addEventListener("click" , function(){
