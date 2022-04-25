@@ -16,7 +16,20 @@ nam.innerText = moveis.title;
 movie.append(nam,img)
 console.log(img,nam)
 
+let pay = Number(JSON.parse(localStorage.getItem("amount")));
 
-// let pay = Number(JSON.parse(localStorage.getItem("amount")))
+document.querySelector("#confirm").addEventListener("click",function(){
+    let amount_pay = document.querySelector("#number_of_seats").value;
+    amount_pay = 100* amount_pay;
+    console.log(amount_pay , pay)
+    if(amount_pay>pay){
+        alert("Insufficient Balance!")
+    }else{
+        pay  = pay - amount_pay;
 
-// if(pay > )
+        localStorage.setItem("amount" , JSON.stringify(pay))
+        alert("Booking successfull!")
+    }
+
+
+})

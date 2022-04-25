@@ -79,3 +79,6 @@ function debounce(func, delay) {
 }
 
 console.log("hello")
+
+let pay = Number(JSON.parse(localStorage.getItem("amount")));
+document.querySelector("#wallet").innerText = pay
