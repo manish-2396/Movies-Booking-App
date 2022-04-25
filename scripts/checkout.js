@@ -9,9 +9,9 @@ let movie = document.querySelector("#movie")
 console.log(moveis)
 
 let img = document.createElement("img");
-img.src = "https://image.tmdb.org/t/p/w500" + moveis.poster_path ; //  ele.poster_path;
+img.src = moveis.Poster
 let nam = document.createElement("h2");
-nam.innerText = moveis.title;
+nam.innerText = moveis.Title;
 
 movie.append(nam,img)
 console.log(img,nam)
