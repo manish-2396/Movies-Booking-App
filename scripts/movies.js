@@ -9,11 +9,6 @@ const myfunction = async () => {
         const q = document.querySelector("#search").value;
         const res = await fetch(`http://www.omdbapi.com/?apikey=1af9e5d9&s=${q}`
         );
-
-        // const res = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=818ec820de5649575955663bd77e57cb&language=en-US&include_adult=false&query=${q}`
-        // );
-
-        //https://api.themoviedb.org/3/search/multi?api_key=818ec820de5649575955663bd77e57cb&language=en-US&include_adult=false&query=${query}`
         const data = await res.json();
 
         console.log(data);
@@ -33,7 +28,6 @@ function append(data) {
         let div = document.createElement("div");
 
         let img = document.createElement("img");
-        //img.src = "https://image.tmdb.org/t/p/w500" + ele.poster_path  //  ele.poster_path;
         img.src = ele.Poster;
         let name = document.createElement("p");
         name.innerText = ele.Title;
