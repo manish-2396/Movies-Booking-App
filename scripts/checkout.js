@@ -30,6 +30,7 @@ document.querySelector("#confirm").addEventListener("click",function(){
         pay  = pay - amount_pay;
 
         localStorage.setItem("amount" , JSON.stringify(pay))
+        document.querySelector("#wallet").innerText = pay;
         alert("Booking successfull!")
         document.querySelector("#number_of_seats").value = null;
     }
